@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <!-- <link rel="stylesheet" href="assets/css/custom.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+
+    <script src="assets/javascript/game.js"></script>
+    <link rel="icon" type="image/png" href="assets/images/me.jpg">
+    <title>CrystalsCollector</title>
+</head>
+
+<body>
+    <!-- navbar-->
+    <!-- <nav class="navbar navbar-light navbar-expand-lg fixed-top shadow-sm bg-white">
+        <h1>Nigel Phillips</h1>
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+            </ul>
+        </div>
+    </nav> -->
+    <!-- Hero Section-->
+    <section class="bg-light">
+        <div class="container">
+
+<div class="jumbotron">
+    <h1 class="display-4">CrystalsCollector</h1>
+
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+        featured content or information.</p>
+    <hr class="my-4">
+    <div class="col-md-12 order-2 order-md-1">
+        </div>
+    <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+    <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+</div>
+
+
+            <div class="row">
+                <div class="col-md-12 order-2 order-md-1">
+
+                    <div class="numberToMatch">
+                        <h2>Target Number:
+                            <span id="randomNumber"></span>
+                        </h2>
+                    </div>
+                    <div class="winsAndLosses">
+                        <h2>Wins:
+                            <span id="numberWins"></span>
+                            </br>
+                            Losses:
+                            <span id="numberLosses"></span>
+                        </h2>
+                    </div>
+
+                    <!-- <div class="gems">
+                        <img src="assets/images/blue.png" class=gemImage id="one" alt="Blue Gem">
+                        <img src="assets/images/green.png" class=gemImage id="two" alt="Green Gem">
+                        <img src="assets/images/red.png" class=gemImage id="three" alt="Red Gem">
+                        <img src="assets/images/yellow.png" class=gemImage id="four" alt="Yellow Gem">
+                    </div> -->
+                    <!-- <div class="gems">
+                        <div class="gemImage" id="one" alt="Blue Gem">one</div>
+                        <div class="gemImage" id="two" alt="Green Gem">two</div>
+                        <div class="gemImage" id="three" alt="Red Gem">three</div>
+                        <div class="gemImage" id="four" alt="Yellow Gem">four</div>
+                    </div> -->
+
+
+
+                    
+
+                    <!-- <div class="toast" role="alert" aria-live="polite" aria-atomic="true" data-delay="10000">
+                        <div role="alert" aria-live="assertive" aria-atomic="true"> You won</div>
+                    </div> -->
+
+                    <!-- <div class="toast">
+                        <div class="toast-header">
+                            Toast Header
+                        </div>
+                        <div class="toast-body">
+                            Some text inside the toast body
+                        </div>
+                    </div> -->
+
+
+
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" id="one" class="btn btn-secondary">One</button>
+                        <button type="button" id="two" class="btn btn-secondary">Two</button>
+                        <button type="button" id="three" class="btn btn-secondary">Three</button>
+                        <button type="button" id="four" class="btn btn-secondary">Four</button>
+                    </div>
+
+                    <div class="userTotal">
+                        <h2>Your Score is:
+                            <span id="finalTotal"></span>
+                        </h2>
+                    </div>
+
+
+                    <!-- Flexbox container for aligning the toasts -->
+                    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center"
+                        style="min-height: 200px;">
+                    
+                        <!-- Then put toasts within -->
+                        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000">
+                            <div class="toast-header">
+                                <!-- <img src="..." class="rounded mr-2" alt="..."> -->
+                                <strong class="mr-auto">CrystalsCollector</strong>
+                                <!-- <small>11 mins ago</small> -->
+                                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="toast-body">
+                                Message from CrystalsCollector
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <button type="button" class="btn btn-primary">
+                        Profile <span class="badge badge-light">9</span>
+                        <span class="sr-only">unread messages</span>
+                    </button> -->
+
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- <div class="toast">
+        <div class="toast-header">
+            Toast Header
+        </div>
+        <div class="toast-body">
+            Some text inside the toast body
+        </div>
+    </div> -->
+
+
+    <!--  footer info -->
+    <footer class="footer navbar-fixed-bottom">
+        <div class="content-wrap">
+            <p>Copyright &copy 2019</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript files-->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

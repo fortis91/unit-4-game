@@ -1,8 +1,7 @@
-body {
+/* body {
   padding-top: 50px;
   background-image: url('../images/cork_1.png');
 
-  /* font-family: 'Roboto', sans-serif; */
     background-color: #8D99AE;
 
 }
@@ -16,7 +15,6 @@ section {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    /* color: rgba(0,0,0,.5); */
     color: #EF233C;
 }
 
@@ -51,19 +49,12 @@ footer {
 }
 
 h1 {
-  /* background-color: #2B2D42;
-  color: #fff; */
-  /* background-color: #2B2D42;
-  color: #fff;
-  padding-left: 40px;
-  border-left: 40px;
-  margin-left: 10px; */
+  
   color: #8D99AE;
 }
 
 
 h2 {
-    /* font-size: 2em; */
     margin: 0;
     border-bottom: 1px solid #EF233C;
     margin-bottom: 10px;
@@ -73,4 +64,64 @@ h2 {
     border-color: #dddddd;
     border-color: #EF233C;
     padding-bottom: 20px;
+} */
+
+
+
+
+
+
+
+
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+
+
+
+
+section {
+  
+
+  padding: 0px;
+  margin: 50px;
+}
+
+
+.jumbotron {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: #fff;
 }
