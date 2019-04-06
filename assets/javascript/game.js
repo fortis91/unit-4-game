@@ -5,7 +5,10 @@ $(document).ready(function() {
     var wins = 0;
     var losses = 0;
 
-    
+    var backgroundMusic = document.createElement("audio");
+    backgroundMusic.setAttribute("src", "assets/sounds/bensound-ukulele.mp3")
+    //backgroundMusic.play();
+
     $('.toast').toast('hide');
 
     // $('.toast').toast('show');
@@ -89,10 +92,11 @@ $(document).ready(function() {
         $('#finalTotal').text(userTotal);
         if (userTotal == targetNumber) {
             //updateWins();
-            //alert("You won!");
-            $('.toast').toast('show');
+            alert("You won!");
+            //$('.toast').toast('show');
             wins++;
             $('#numberWins').text(wins);
+            toggleMusic();
             init();
             
         }
@@ -104,6 +108,27 @@ $(document).ready(function() {
             init()
         }
     }
+
+    function toggleMusic() {
+        console.log("called toggleMusic");
+
+        if (backgroundMusic.playing()) {
+            // $('#music-toggle>a>i').removeClass("fa-volume-up").addClass("fa-volume-off");
+            // $('#music-toggle>a').text('Off');
+            // Stop Music
+            backgroundMusic.stop();
+        } else {
+            // $('#music-toggle>a>i').removeClass("fa-volume-off").addClass("fa-volume-up");
+            // $('#music-toggle>a').text('On');
+            // Start music
+            backgroundMusic.play();
+        }
+
+    }
+
+
+
+
 
     init();
     playGame();
