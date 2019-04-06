@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var targetNumber;
-    var num = [];
+    var diamond = [];
     var userTotal = 0;
     var wins = 0;
     var losses = 0;
@@ -10,24 +10,23 @@ $(document).ready(function() {
     //backgroundMusic.play();
 
     $('.toast').toast('hide');
-
     // $('.toast').toast('show');
 
     function playGame() {
         $('#one').on('click', function () {
-            userTotal = userTotal + num1;       
+            userTotal = userTotal + diamond1;       
             checkGameStatus();
         })
         $('#two').on('click', function () {
-            userTotal = userTotal + num2;
+            userTotal = userTotal + diamond2;
             checkGameStatus();
         })
         $('#three').on('click', function () {
-            userTotal = userTotal + num3;     
+            userTotal = userTotal + diamond3;     
             checkGameStatus();
         })
         $('#four').on('click', function () {
-            userTotal = userTotal + num4;
+            userTotal = userTotal + diamond4;
             checkGameStatus();
         });
     }
@@ -49,85 +48,51 @@ $(document).ready(function() {
 
 
     function init() {
-        log("Initialize...");
         console.clear();
-
-        targetNumber = generateRandomNumnber(19, 101);
+        console.log("initialized...");
         userTotal = 0;
-
-        log(targetNumber);
-
         for (i = 1; i < 5; i++) {
-            this["num" + i] = generateRandomNumnber(1, 12);
-            console.log(this["num" + i]);
+            this["diamond" + i] = generateRandomNumnber(1, 12);
+            console.log("value of diamond"+i+": " +this["diamond" + i]);
         }
+        targetNumber = generateRandomNumnber(19, 101);
+        console.log("target number: "+targetNumber);
         
         updateStats();
     }
 
 
-    // function updateWins() { 
-    //     alert("You won!");
-    //     wins++;
-    //     $('#numberWins').text(wins);
-    //     init();
-    // }
-
-
-    // function udpateLoses() {
-    //     alert("You lose!");
-    //     losses++;
-    //     $('#numberLosses').text(losses);
-    //     init()
-    // }
-
-
-    function log(message) {
-        console.log(message);
-    }
-
-
     function checkGameStatus() {
-        console.log("New userTotal= " + userTotal);
+        console.log("new user total: " + userTotal);
         $('#finalTotal').text(userTotal);
-        if (userTotal == targetNumber) {
-            //updateWins();
+        if (userTotal === targetNumber) {
             alert("You won!");
             //$('.toast').toast('show');
             wins++;
             $('#numberWins').text(wins);
-            toggleMusic();
+            //toggleMusic();
+            //playMusic();
             init();
             
         }
         else if (userTotal > targetNumber) {
-            //udpateLoses();
-            alert("You lose!");
+            alert("You lost!");
             losses++;
             $('#numberLosses').text(losses);
             init()
         }
     }
 
-    function toggleMusic() {
+    function playMusic() {
         console.log("called toggleMusic");
 
-        if (backgroundMusic.playing()) {
-            // $('#music-toggle>a>i').removeClass("fa-volume-up").addClass("fa-volume-off");
-            // $('#music-toggle>a').text('Off');
-            // Stop Music
-            backgroundMusic.stop();
-        } else {
-            // $('#music-toggle>a>i').removeClass("fa-volume-off").addClass("fa-volume-up");
-            // $('#music-toggle>a').text('On');
-            // Start music
+        if (backgroundMusic.paused) {
             backgroundMusic.play();
+        } else {
+            backgroundMusic.pause();
         }
 
     }
-
-
-
 
 
     init();

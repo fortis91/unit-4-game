@@ -95,7 +95,8 @@ h2 {
 }
 
 .jumbotron .container {
-  max-width: 40rem;
+  /* max-width: 40rem; */
+    max-width: 60rem;
 }
 
 footer {
@@ -111,6 +112,16 @@ footer p {
 
 
 
+
+/* .container .col-md-3 {
+  border: 5px;
+  padding: 5px;
+  margin: 5px;
+} */
+
+#numberWins, #numberLosses, #randomNumber, #finalTotal {
+  padding: 10px;
+}
 section {
   
 
